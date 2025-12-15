@@ -12,9 +12,9 @@
 }
 
 :root {
-    --main-color:#00c9a5;
+    --main-color:#3dbed4;
     --nav-color:#00afa5;
-    --bg-color:#e8f3f1;
+    --bg-color:#d7d8d5;
     --black:#2f4858;
     --card-color: #c0dbea;
     --border:0.1rem solid var(var(--card-color))
@@ -62,6 +62,7 @@ section{
 }
 .title span{
     color:var(--main-color);
+    
 }
 
 /* HEADER */
@@ -91,7 +92,36 @@ section{
     font-size: 2rem;
 }
 
-/* NAVBAR */
+/* dropdown method */
+
+.dropdown-content{
+    position: absolute;
+    top: -100%;
+    background: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropbtn:hover + .dropdown-content{
+    top: 70%;
+    border-radius: 4px;
+}
+
+.dropdown-content:hover{
+    top: 70%;
+    padding: 2rem;
+    border-radius: 5px;
+
+}
+
+.dropdown-content a{
+    color:  #000 !important;
+}
+
+/* NAVBAR */ 
+.header .navbar{
+    display: flex;
+}
 .header .navbar a {
     display: inline-block;
     color: white;
@@ -287,15 +317,19 @@ background: linear-gradient(135deg, #f6d365, #fda085);
 }
 .cakes .wrapper .cake-card{
     background-color: var(--card-color);
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 2.4rem;
     text-align: center;
     transform-origin: top center ;
+    margin-bottom: 15px;
 }
 /*change color and convert black*/
 .cakes .wrapper .cake-card:hover{
-    transform: scaleY(1.1);
+      transform: translateY(-15px) scale(1.05);
     background: var(--black);
      margin-bottom: 40px;   /* space added on hover */
+      transition: transform 0.3s ease, 
+                background 0.3s ease, 
+                margin-bottom 0.3s ease;
    
 }
 .cakes .wrapper .cake-card:hover h3{
@@ -333,6 +367,7 @@ background: linear-gradient(135deg, #f6d365, #fda085);
      display: grid; 
      gap: 2.4rem; 
      margin-bottom: 30px;
+   
      
 }
 
@@ -354,7 +389,10 @@ background: pink;
         0 10px 20px rgba(0, 0, 0, 0.30);  
    cursor: pointer;
     z-index: 10;
-      transform: scale(1.08);
+      transform: translateY(-15px) scale(1.05);
+        transition: transform 0.3s ease, 
+                background 0.3s ease, 
+                margin-bottom 0.3s ease;
     margin-top: 12px;  
     margin-bottom: 37px;  
     background: #9789aa;
@@ -378,4 +416,147 @@ background: pink;
     color: rgb(22, 9, 1);
     font-size: 1.9rem;
     padding: 0.5rem 0;
+}
+
+
+
+/* ================= DRY CAKES SECTION ================= */
+.dry-cakes {
+  padding: 70px 40px;
+  background: #eee6ff;
+}
+
+/* Title */
+.dry-cakes .title {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+
+/* ================= HORIZONTAL SCROLL ================= */
+.dry-cakes .wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;        /* 🔥 keep all cards in one row */
+  gap: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+}
+
+/* Scrollbar */
+.dry-cakes .wrapper::-webkit-scrollbar {
+  height: 8px;
+  display: none;
+}
+.dry-cakes .wrapper::-webkit-scrollbar-thumb {
+  background: #ff9f9f;
+  border-radius: 10px;
+}
+
+/* ================= CARD ================= */
+.dry-cakes .card {
+  flex: 0 0 300px;          /* fixed width = perfect scroll */
+  height: 420px;
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover Pop Effect */
+.dry-cakes .card:hover {
+  transform: translateY(-18px) scale(1.05);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+  z-index: 10;
+   border-radius: 35px;
+   width: 50px;
+}
+
+/* ================= IMAGE ================= */
+.dry-cakes .card .img {
+  width: 100%;
+  height: 100%;
+}
+
+.dry-cakes .card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* 🔥 all images align horizontally */
+  object-position: center;
+  display: block;
+}
+
+
+/* Dark Overlay */
+.dry-cakes .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.1)
+  );
+  z-index: 1;
+}
+
+/* ================= CONTENT ================= */
+.dry-cakes .content {
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  width: 100%;
+  padding: 22px;
+  color: #fff;
+  z-index: 2;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  transition: bottom 0.4s ease;
+}
+
+.dry-cakes .card:hover .content {
+  bottom: 0;
+}
+
+/* Text */
+.dry-cakes .content h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.dry-cakes .content p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.dry-cakes .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffb347;
+}
+
+/* Button */
+.dry-cakes .btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 22px;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  border-radius: 25px;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .dry-cakes .card {
+    flex: 0 0 260px;
+  }
 }
