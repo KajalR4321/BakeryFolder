@@ -15,3 +15,18 @@ const cartItems =document.querySelector('.cart-items-conatiner');
 cartIcon.addEventListener("click",()=>{
 cartItems.classList.toggle("active")
 })
+const swissCards = document.querySelectorAll(".swiss-card");
+
+const swissObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+swissCards.forEach(card => swissObserver.observe(card));
+
