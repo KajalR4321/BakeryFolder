@@ -286,7 +286,7 @@ background: linear-gradient(135deg, #f6d365, #fda085);
     min-height: 84vh;
     margin-top: 16vh;
     background: aqua;
-    background-image: url("/asserts/cakebackground.jpg") ;
+    background-image: url("./asserts/cakebackground.jpg") ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
