@@ -299,6 +299,7 @@ background: linear-gradient(135deg, #f6d365, #fda085);
     font-size: 6rem;
     text-transform:uppercase ;
     color: #4a2c2a;
+    margin-bottom: 15px;
    
     
 }
@@ -308,6 +309,7 @@ background: linear-gradient(135deg, #f6d365, #fda085);
     line-height: 3.2rem;
     padding:  1rem 0;
     color:#1a1a1a;
+    margin-bottom: 12px;
 }
 /* cakes section*/
 .wrapper{
@@ -667,4 +669,472 @@ background: pink;
 
 .swiss-btn:hover {
   transform: scale(1.08);
+}
+/* ===== SPECIAL CAKES (LATEST DESIGN) ===== */
+
+/* ================= SPECIAL CAKES SECTION ================= */
+
+.special-cakes {
+  padding: 90px 7%;
+  background: linear-gradient(180deg, #f7f3ff, #ece6ff);
+}
+
+/* MAIN TITLE */
+.special-cakes .title {
+ text-align: center;
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+
+
+
+/* GROUP WRAPPER */
+.cake-group {
+  margin-bottom: 90px;
+}
+
+/* GROUP HEADING */
+.group-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  position: relative;
+}
+
+/* HEADING LINE */
+ .group-title::after {
+  content: "";
+  width: 180px;
+  /* height: 4px; */
+  height: 6px;
+  background: linear-gradient(45deg, #7a5cff, #b39cff);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+} 
+
+/* ENGAGEMENT HIGHLIGHT */
+/* Highlight Wedding & Engagement Cakes */
+.cake-group:nth-of-type(1) .group-title {
+  color: #e60073; /* vibrant pink */
+  font-weight: 900; /* bold */
+  text-transform: uppercase;
+   background: linear-gradient(45deg, #7a5cff, #ff7f50); /* purple to orange */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Add underline */
+.cake-group:nth-of-type(1) .group-title::after {
+  content: "";
+  width: 130px;
+  height: 5px;
+  background: linear-gradient(45deg, #ff4da6, #ff99cc);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 10px;
+}
+/* Highlight Birthday & Party Cakes */
+.cake-group:nth-of-type(2) .group-title {
+  font-weight: 900; /* bold */
+  text-transform: uppercase;
+  font-size: 2.6rem;
+  text-align: center;
+  background: linear-gradient(45deg, #ff4da6, #ffd700); /* pink → yellow */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 40px;
+}
+
+/* Add gradient underline */
+.cake-group:nth-of-type(2) .group-title::after{
+  content: "";
+  width: 130px;
+  height: 5px;
+  background: linear-gradient(45deg, #ff4da6, #ffd700); /* same gradient */
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 10px;
+}
+
+
+.cake-group:nth-of-type(3) .group-title {
+  color: #e60073;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.cake-group:nth-of-type(3) .group-title::after {
+  width: 120px;
+  height: 5px;
+  background: linear-gradient(45deg, #ff4da6, #ff99cc);
+}
+
+/* GRID */
+.special-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1250px;
+  margin: auto;
+}
+
+/* CARD */
+.special-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+  transform: translateY(60px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+/* SHOW ON SCROLL */
+.special-card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* IMAGE */
+.special-card img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+/* IMAGE ZOOM */
+.special-card:hover img {
+  transform: scale(1.18);
+}
+
+/* OVERLAY */
+.special-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.65));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.special-card:hover::after {
+  opacity: 1;
+}
+
+/* BUTTON */
+.special-btn {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.85);
+  padding: 12px 30px;
+  border-radius: 35px;
+  background: linear-gradient(45deg, #ff5fcf, #8f5bff);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+/* BUTTON SHOW */
+.special-card:hover .special-btn {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* BUTTON HOVER */
+.special-btn:hover {
+  background: linear-gradient(45deg, #8f5bff, #ff5fcf);
+}
+
+/* ================= NEW ARRIVALS ================= */
+.new-arrivals {
+  padding: 80px 7%;
+  background: linear-gradient(180deg, #f3eaf7, #e2d3f0); /* new section background */
+}
+
+/* SECTION TITLE */
+.new-arrivals .title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+
+
+/* CATEGORY HEADING */
+.cake-group .group-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #e60073; /* vibrant pink for headings */
+}
+
+.cake-group .group-desc {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* GRID FOR CARDS */
+.arrival-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  max-width: 1250px;
+  margin: auto;
+}
+/* ================= GROUP STYLES ================= */
+
+/* Bread Group */
+.cake-group.bread {
+  background: #fff0f8; /* soft pink */
+  padding: 40px 20px;
+  border-radius: 25px;
+  margin-bottom: 50px;
+}
+
+.cake-group.bread .group-title {
+  color: #e60073; /* vibrant pink for bread */
+}
+
+/* Jar Cakes Group */
+.cake-group.jar-cakes {
+  background: #f0f8ff; /* soft blue */
+  padding: 40px 20px;
+  border-radius: 25px;
+  margin-bottom: 50px;
+}
+
+
+
+/* CARD BASE */
+.arrival-card {
+  background: #fff0f8; /* changed from pure white to soft pink */
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+  transform: translateY(60px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.arrival-card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* IMAGE */
+.arrival-card img {
+  width: 100%;
+  height: 280px; /* adjust height for bigger cake view */
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.arrival-card:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+
+/* CONTENT BELOW IMAGE */
+.arrival-content {
+  text-align: center;
+  padding: 15px 10px 20px 10px;
+}
+
+/* PRODUCT NAME */
+.arrival-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 6px;
+}
+/* Move the group title slightly upward */
+
+
+
+/* PRODUCT DESCRIPTION */
+.arrival-desc {
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* PRICE */
+.arrival-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #7a5cff; /* similar to Dry Cakes */
+  margin-bottom: 12px;
+}
+
+/* BUTTON */
+.arrival-btn {
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff7b5f, #ff5fcf); /* fresh gradient */
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.35s ease;
+}
+
+.arrival-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #ff5fcf, #ff7b5f);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+/* ================= ABOUT SECTION ================= */
+/* .about .container{
+  display: flex;
+  justify-content: baseline;
+  background-color: var(--black);
+  flex-wrap: wrap;
+
+}
+.about .container .img{
+  flex: 1 1 45rem;
+
+  
+}
+.about .container .img img{
+width: 100%;  
+  
+}
+.about .container .content{
+  flex:  1 1 45 rem;
+  padding: 2rem;
+
+}
+.about .container .content h3{
+  color: white;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+ */
+.about .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--black);
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  gap: 3rem;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+/* LEFT SIDE (IMAGE + NAME) */
+.about .container .img {
+  flex: 1 1 35rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideLeft 1s ease forwards;
+ 
+}
+
+.about .container .img img {
+  width: 245px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid rgba(255,255,255,0.2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  
+}
+
+.about .container .img .founder-name {
+  color: white;
+  margin-top: 1.5rem;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.about .container .img .founder-role {
+  color: #ccc;
+  font-size: 1.9rem;
+}
+
+/* RIGHT SIDE CONTENT */
+.about .container .content {
+  flex: 1 1 45rem;
+  padding: 2rem;
+}
+
+.about .container .content p {
+  color: white;
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.6rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* paragraph delay (one by one) */
+.about .container .content p:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.about .container .content p:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+/* BUTTON */
+.about .container .content .btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 1rem 2.5rem;
+  background: var(--main-color);
+  color: var(--black);
+  font-size: 1.5rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 1s;
+}
+
+.about .container .content .btn:hover {
+  background: var(--card-color);
+  color: black;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about .container {
+    flex-direction: column;
+    text-align: center;
+  }
 }
